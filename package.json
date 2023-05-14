@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/babel-plugin": "^11.11.0",
+    "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@portabletext/react": "^2.0.2",
@@ -23,8 +25,14 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
+    "react-multi-carousel": "^2.8.3",
     "react-redux": "^8.0.5",
+    "react-slick": "^0.29.0",
     "typescript": "5.0.4",
     "typewriter-effect": "^2.19.0"
+  },
+  "devDependencies": {
+    "@types/react-slick": "^0.23.10",
+    "react-mailer": "^0.0.0"
   }
 }

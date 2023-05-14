@@ -1,12 +1,12 @@
 
 import {TitleContainer} from './Title.styled'
-interface ITitle extends React.ComponentPropsWithoutRef<'h1'>{
-
+interface ITitle {
+title: string
 }
 
-const Title = ({children}:ITitle) => {
+const Title = ({title}:ITitle) => {
   return (
-    <TitleContainer>{children}</TitleContainer>
+    <TitleContainer>{title}</TitleContainer>
   )
 }
 export default Title

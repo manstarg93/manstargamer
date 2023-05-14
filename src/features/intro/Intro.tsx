@@ -1,9 +1,10 @@
 import Image from "next/image"
 import Typewriter from 'typewriter-effect'
-import { IntroContainer, IntroDataContainer, IntroName, IntroTitle, PortfolioImageContainer } from "./Intro.styles"
+import { IntroDataContainer, IntroName, IntroTitle, PortfolioImageContainer } from "./Intro.styles"
 import me from '../../assets/img/portfoliome.jpg'
 import { useEffect } from "react"
 import { introType } from "./introType"
+import SectionWrapper from "@/component/sectionWrapper/SectionWrapper"
 
 
 interface IIntro {
@@ -11,7 +12,7 @@ interface IIntro {
 }
 const Intro = ({intro}: IIntro) => {
 
-    return <IntroContainer>
+    return <SectionWrapper>
         {intro ? intro.map(data => {
 
         const {_id,typeText1,typeText2,imageUrl,occupation} = data
@@ -41,7 +42,7 @@ const Intro = ({intro}: IIntro) => {
             
   
     }) :  <p>Loading...</p>}
-    </IntroContainer>
+    </SectionWrapper>
     
   
 

@@ -1,14 +1,17 @@
 import Link from 'next/link'
-import { socialIcons } from './socialData'
+import { socialIcons, socialIconType } from './socialData'
 import { SocialIconsContainer } from './SocialIcons.styled.'
 
+interface ISocial {
+  mySocialIcons?: socialIconType
+}
 
-const SocialIcons = () => {
+const SocialIcons = ({mySocialIcons}:ISocial) => {
   return (
     <SocialIconsContainer>
-        {socialIcons.map((icons, index) => {
+        {mySocialIcons?.map((icons, index) => {
             const {title, Icon, link} = icons
-            return <Link key={title} href={link} > <Icon key={title}/>  
+            return <Link key={title} href={link} target='_blank'> <Icon key={title}/>  
             </Link> 
         })}
     </SocialIconsContainer>

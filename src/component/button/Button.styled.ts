@@ -8,5 +8,11 @@ border: solid .5px ${variables.gray};
 color: ${variables.gray};
 background-color: transparent;
 padding: 10px;
+border-radius: 5px;
 width: max-content;
+
+&:hover{
+    background-color: ${variables.white};
+    color: ${variables.darkGray};
+}
 `

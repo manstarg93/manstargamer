@@ -1,5 +1,8 @@
 
 
+
+
+
 export const navData = [
     {title: 'about', link: '#'},
     {title: 'skills', link: '#'},

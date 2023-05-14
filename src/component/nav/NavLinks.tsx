@@ -1,18 +1,29 @@
 
+import { RefObject } from "react"
 import { NavLinksContainer,NavLink } from "./NavLinks.styled"
 
 
 interface INavLinks {
-    navData: {title: string,
-    link: string}[]
+  
+      aboutRef: RefObject<HTMLDivElement>
+       portfolioRef: RefObject<HTMLDivElement>
+contactRef: RefObject<HTMLDivElement>
+skillRef: RefObject<HTMLDivElement>
 }
-const NavLinks = ({navData}:INavLinks) => {
+const NavLinks = ({aboutRef,portfolioRef,contactRef,skillRef}:INavLinks) => {
+
+const scrollToNavHandler = () => {
+    // myRef.current?.scrollIntoView({ behavior: 'smooth' });
+}
+
   return (
    <NavLinksContainer>
-       {navData.map(data => {
-           const {title,link} = data
-           return <NavLink key={title}>{title}</NavLink>
-       })}
+       
+     <NavLink onClick={() => aboutRef.current?.scrollIntoView({behavior: "smooth"})} >About</NavLink>
+     <NavLink onClick={() => portfolioRef.current?.scrollIntoView({behavior: "smooth"})} >Projects</NavLink>
+     <NavLink onClick={() => skillRef.current?.scrollIntoView({behavior: "smooth"})} >Skills</NavLink>
+     <NavLink onClick={() => contactRef.current?.scrollIntoView({behavior: "smooth"})} >Contact</NavLink>
+
    </NavLinksContainer>
   )
 }

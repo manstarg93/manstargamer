@@ -1,29 +1,27 @@
-import { AboutAndDescription, AboutComponent, AboutContainer, AboutDescription, AboutDescriptionContainer, AboutDescriptionTitle, AboutImageContainer } from "./About.styled"
+import { AboutAndDescription,  AboutDescription, AboutDescriptionContainer, AboutDescriptionTitle, AboutImageContainer } from "./About.styled"
 import Title from '../../component/title/Title'
-import me from '../../assets/img/portfoliome.jpg'
+
 import Image from "next/image"
 import { aboutType } from "./aboutType"
-import {PortableText} from '@portabletext/react'
+import SectionWrapper from "@/component/sectionWrapper/SectionWrapper"
+import { RefObject, useRef } from "react"
 
 
 interface IAbout {
     about: aboutType
+    aboutRef: RefObject<HTMLDivElement>
 }
-const About = ({about}:IAbout) => {
+const About = ({about,aboutRef}:IAbout) => {
 
-    console.log(about)
+   
+    
   return (
-      <AboutContainer>
+      <SectionWrapper componentRef={aboutRef}>
+           <Title title="About"/>
           {about ? about.map(data => {
               const {aboutDescription,imageUrl,_id,aboutTitle} = data
-              return <AboutComponent key={_id} >
-        <Title>About</Title>
-        <AboutAndDescription>
- <AboutImageContainer>
-     <Image src={imageUrl} alt='about me' width={300} height={300} priority />
- </AboutImageContainer>
-
-        <AboutDescriptionContainer>
+              return <AboutAndDescription  key={_id}>
+                   <AboutDescriptionContainer>
              <AboutDescriptionTitle>{aboutTitle}</AboutDescriptionTitle>
              {aboutDescription.map(data => {
                  return data.children.map(datas => {
@@ -34,13 +32,18 @@ const About = ({about}:IAbout) => {
              
       
         </AboutDescriptionContainer>
+ <AboutImageContainer>
+     <Image src={imageUrl} alt='about me' width={400} height={400} priority />
+ </AboutImageContainer>
+
+       
        
         </AboutAndDescription>
        
-    </AboutComponent>
+ 
           }) : <p>Loading...</p>}
  
-      </AboutContainer>
+      </SectionWrapper>
    
   )
 }
