@@ -9,6 +9,7 @@ import Title from "@/component/title/Title"
 
 
 
+
 interface IAbout {
     about: aboutType
     aboutRef: RefObject<HTMLDivElement>
