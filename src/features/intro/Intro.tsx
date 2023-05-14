@@ -1,8 +1,6 @@
 import Image from "next/image"
 import Typewriter from 'typewriter-effect'
 import { IntroDataContainer, IntroName, IntroTitle, PortfolioImageContainer } from "./Intro.styles"
-import me from '../../assets/img/portfoliome.jpg'
-import { useEffect } from "react"
 import { introType } from "./introType"
 import SectionWrapper from "@/component/sectionWrapper/SectionWrapper"
 

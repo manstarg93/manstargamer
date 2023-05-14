@@ -1,6 +1,6 @@
 import Button from "@/component/button/Button"
 import SectionWrapper from "@/component/sectionWrapper/SectionWrapper"
-import Title from "../../component/title/Title"
+import Title from "@/component/title/Title"
 import Image from "next/image"
 import Link from "next/link"
 import { RefObject, useEffect, useState } from "react"

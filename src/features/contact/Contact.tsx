@@ -1,8 +1,8 @@
 import SectionWrapper from "@/component/sectionWrapper/SectionWrapper"
 import { socialIcons } from "@/component/social/socialData"
 import SocialIcons from "@/component/social/SocialIcons"
-import Title from "../../component/title/Title"
-import Link from "next/link"
+import Title from "@/component/title/Title"
+
 import { RefObject } from "react"
 import { ContactContainer, ContactIconContainer, EmailLink } from "./Contact.styled"
 
