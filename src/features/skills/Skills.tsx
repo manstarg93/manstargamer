@@ -1,12 +1,11 @@
 import SectionWrapper from "@/component/sectionWrapper/SectionWrapper"
-import Title from "@/component/title/Title"
+import Title from "../../component/title/Title"
 
 
-import { Skill, SkillBox, SkillContainer, SkillsContainer, SkillSummaryTitle, SkillTitle } from "./Skills.styled"
-import { currentSkillType, mySkillType, skillsType } from "./skillsType"
+import { Skill, SkillBox, SkillContainer, SkillsContainer, SkillTitle } from "./Skills.styled"
+import { mySkillType } from "./skillsType"
 
-import Slider from 'react-slick'
-import { RefObject, useEffect, useState } from "react"
+import { RefObject } from "react"
 
 
 
