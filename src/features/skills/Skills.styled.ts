@@ -30,7 +30,7 @@ text-align: center;
 export const SkillContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
-justify-content: center;
+justify-content: space-evenly;
 
 
 
@@ -44,11 +44,11 @@ justify-content: center;
 export const SkillBox = styled.div`
 min-width: 100%;
 min-height: 300px;
-margin: 2rem;
+margin: 1rem;
 ${borderMixin}
 
-@media screen and (min-width: ${device.tablet}){
-min-width: 33.33%;
+@media screen and (min-width: ${device.laptop}){
+min-width: max-content;
 }
 `
 export const SkillTitle = styled.h2`
