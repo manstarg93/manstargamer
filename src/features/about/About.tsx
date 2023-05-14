@@ -1,10 +1,11 @@
 import { AboutAndDescription,  AboutDescription, AboutDescriptionContainer, AboutDescriptionTitle, AboutImageContainer } from "./About.styled"
-import Title from '../../component/title/Title'
+
 
 import Image from "next/image"
 import { aboutType } from "./aboutType"
 import SectionWrapper from "@/component/sectionWrapper/SectionWrapper"
 import { RefObject } from "react"
+import Title from "@/component/title/Title"
 
 
 interface IAbout {
