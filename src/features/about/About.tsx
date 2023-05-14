@@ -4,7 +4,7 @@ import Title from '../../component/title/Title'
 import Image from "next/image"
 import { aboutType } from "./aboutType"
 import SectionWrapper from "@/component/sectionWrapper/SectionWrapper"
-import { RefObject, useRef } from "react"
+import { RefObject } from "react"
 
 
 interface IAbout {

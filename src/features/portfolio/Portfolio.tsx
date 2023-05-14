@@ -24,7 +24,7 @@ const Portfolio = ({portfolio,portfolioRef}:Iportfolio) => {
             setShowViewMoreButton(true)
         }
         
-    },[])
+    },[portfolio])
 
 
 
