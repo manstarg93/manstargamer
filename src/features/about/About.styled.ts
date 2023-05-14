@@ -19,19 +19,22 @@ justify-content: center;
 
 ${borderMixin}
 
+
     @media screen and (min-width: ${device.laptop}){
         flex-wrap: nowrap;
-        padding: 15px;
+        
     }
 `
 
 export const AboutImageContainer = styled.div`
 
 margin: 0 auto;
+padding: 0 2rem;
+display: flex;
+align-items: center;
 img{
     object-fit: cover;
-    margin: 0 auto;
-
+    
 
     @media screen and (min-width: ${device.tablet}){
 
@@ -41,7 +44,7 @@ img{
 `
 
 export const AboutDescriptionContainer = styled.div`
-padding: 15px;
+padding: 2rem;
 `
 
 export const AboutDescriptionTitle = styled.h2`
