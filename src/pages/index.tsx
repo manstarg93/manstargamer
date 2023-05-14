@@ -38,9 +38,9 @@ export default function Home({intro,about,allSkills,portfolio}:IIndex) {
      skillRef={skillRef} 
      contactRef={contactRef}>
       <Intro intro={intro}/>
-       
+        <Portfolio portfolio={portfolio} portfolioRef={portfolioRef}/>
        <About about={about} aboutRef={aboutRef}/>
-       <Portfolio portfolio={portfolio} portfolioRef={portfolioRef}/>
+      
        <Skills allSkills={allSkills} skillRef={skillRef}/>
        <Contact contactRef={contactRef}/>
      </Layout>
@@ -59,8 +59,9 @@ export async function getStaticProps() {
   useCdn: false
 });
 const intro = await fetchIntro(client)
-const about = await fetchAbout(client)
 const portfolio = await fetchPortfolio(client)
+const about = await fetchAbout(client)
+
 const allSkills = skills
 
   return{

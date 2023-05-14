@@ -28,11 +28,10 @@ text-align: center;
 
 
 export const SkillContainer = styled.div`
-display: grid;
-/* flex-wrap: wrap; */
+display: flex;
+flex-wrap: wrap;
 justify-content: center;
-grid-gap: 3rem;
-grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
+
 
 
 @media screen and (min-width: ${device.tablet}){
@@ -43,13 +42,13 @@ grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
 
 
 export const SkillBox = styled.div`
-min-width: max-content;
+min-width: 100%;
 min-height: 300px;
-margin: 20px 0;
+margin: 2rem;
 ${borderMixin}
 
 @media screen and (min-width: ${device.tablet}){
-
+min-width: 33.33%;
 }
 `
 export const SkillTitle = styled.h2`

@@ -18,9 +18,9 @@ const scrollToNavHandler = () => {
 
   return (
    <NavLinksContainer>
-       
+         <NavLink onClick={() => portfolioRef.current?.scrollIntoView({behavior: "smooth"})} >Projects</NavLink>
      <NavLink onClick={() => aboutRef.current?.scrollIntoView({behavior: "smooth"})} >About</NavLink>
-     <NavLink onClick={() => portfolioRef.current?.scrollIntoView({behavior: "smooth"})} >Projects</NavLink>
+   
      <NavLink onClick={() => skillRef.current?.scrollIntoView({behavior: "smooth"})} >Skills</NavLink>
      <NavLink onClick={() => contactRef.current?.scrollIntoView({behavior: "smooth"})} >Contact</NavLink>
 
