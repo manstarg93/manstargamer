@@ -4,10 +4,11 @@ import { AboutAndDescription,  AboutDescription, AboutDescriptionContainer, Abou
 import Image from "next/image"
 import { aboutType } from "./aboutType"
 import SectionWrapper from "@/component/sectionWrapper/SectionWrapper"
-import { RefObject } from "react"
+import { RefObject, useEffect, useRef } from "react"
 import Title from "@/component/title/Title"
 
-
+import { useSelector, useDispatch } from 'react-redux'
+// import { getAboutRef } from "@/store/uiSlice"
 
 
 interface IAbout {
@@ -16,7 +17,12 @@ interface IAbout {
 }
 const About = ({about,aboutRef}:IAbout) => {
 
-   
+
+    
+    const dispatch = useDispatch()
+//    useEffect(() => {
+//     dispatch(getAboutRef(aboutRef))
+//    },[])
     
   return (
       <SectionWrapper componentRef={aboutRef}>

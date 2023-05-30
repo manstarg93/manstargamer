@@ -12,17 +12,17 @@ skillRef: RefObject<HTMLDivElement>
 }
 const NavLinks = ({aboutRef,portfolioRef,contactRef,skillRef}:INavLinks) => {
 
-const scrollToNavHandler = () => {
-    // myRef.current?.scrollIntoView({ behavior: 'smooth' });
+const scrollToNavHandler = (refObj: RefObject<HTMLDivElement>) => {
+    refObj.current?.scrollIntoView({ behavior: 'smooth' });
 }
 
   return (
    <NavLinksContainer>
-         <NavLink onClick={() => portfolioRef.current?.scrollIntoView({behavior: "smooth"})} >Projects</NavLink>
-     <NavLink onClick={() => aboutRef.current?.scrollIntoView({behavior: "smooth"})} >About</NavLink>
+         <NavLink onClick={() => scrollToNavHandler(portfolioRef)} >Projects</NavLink>
+     <NavLink onClick={() => scrollToNavHandler(aboutRef)} >About</NavLink>
    
-     <NavLink onClick={() => skillRef.current?.scrollIntoView({behavior: "smooth"})} >Skills</NavLink>
-     <NavLink onClick={() => contactRef.current?.scrollIntoView({behavior: "smooth"})} >Contact</NavLink>
+     <NavLink onClick={() => scrollToNavHandler(skillRef)} >Skills</NavLink>
+     <NavLink onClick={() => scrollToNavHandler(contactRef)} >Contact</NavLink>
 
    </NavLinksContainer>
   )
